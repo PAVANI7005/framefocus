@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - FrameFocus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9f9ff;
+      color: #333;
+      padding: 20px;
+    }
+    header {
+      background: linear-gradient(to right, #4b0082, #8a2be2);
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 i {
+      margin-right: 10px;
+      color: #ffd700;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 8px 15px;
+      border-radius: 25px;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    nav a.active {
+      color: #ffd700;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4b0082;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .photo {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .photo:hover {
+      transform: scale(1.03);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      background: #eee;
+      font-weight: 500;
+    }
+
+    a.back {
+      display: inline-block;
+      margin: 20px 0;
+      color: #4b0082;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .birthday-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background: linear-gradient(to right bottom, #ff69b4, #ff1493);
+      border-radius: 12px;
+    }
+    
+    .birthday-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .birthday-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .marriage-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background: linear-gradient(to right bottom, #4b0082, #8a2be2);
+      border-radius: 12px;
+    }
+
+    .marriage-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .marriage-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .baby-shower {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background: linear-gradient(to right bottom, #20B2AA, #48D1CC);
+      border-radius: 12px;
+    }
+
+    .baby-shower img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .baby-shower img:hover {
+      transform: scale(1.05);
+    }
+
+    .engage-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background: linear-gradient(to right bottom, #FF8C00, #FFA500);
+      border-radius: 12px;
+    }
+
+    .engage-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .engage-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .corporate-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background: linear-gradient(to right bottom, #4b0082, #8a2be2);
+      border-radius: 12px;
+    }
+
+    .corporate-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .corporate-gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-camera"></i> FrameFocus</h1>
+    <nav>
+      <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a>
+      <a href="./service.html"><i class="fas fa-concierge-bell"></i> Services</a>
+      <a href="./achive.html"><i class="fas fa-trophy"></i> Achievements</a>
+      <a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+  <h1 class="gallery-header">📸 Our Captured Moments</h1>
+  <div class="gallery">
+    <div class="photo" onclick="openModal(0)">
+      <div class="marriage-gallery">
+        <img src="./Images/marriage/img1.jpg" alt="Marriage 1">
+        <img src="./Images/marriage/img2.jpg" alt="Marriage 2">
+        <img src="./Images/marriage/img3.jpg" alt="Marriage 3">
+      </div>
+      <div class="caption">Wedding Event</div>
+    </div>
+    <div class="photo" onclick="openModal(0)">
+      <div class="baby-shower">
+        <img src="./Images/babyshower/img1.jpg" alt="Baby Shower 1">
+        <img src="./Images/babyshower/img2.png" alt="Baby Shower 2">
+        <img src="./Images/babyshower/img5.jpg" alt="Baby Shower 3">
+      </div>
+     <div class="caption">Baby Shower</div>
+    </div>
+
+    <div class="photo"  onclick="openModal(0)">
+      <div class="engage-gallery">
+        <img src="./Images/engage/img1.jpg" alt="Birthday 1">
+        <img src="./Images/engage/img2.webp" alt="Birthday 2">
+        <img src="./Images/engage/img3.jpg" alt="Birthday 3">
+      </div>
+      <div class="caption">Engagement Shoot</div>
+    </div>
+    <div class="photo" onclick="openModal(0)">
+      <div class="corporate-gallery">
+        <img src="./Images/corporate/img4.jpeg" alt="Corporate 1">
+        <img src="./Images/corporate/img5.jpg" alt="Corporate 2">
+        <img src="./Images/corporate/img3.jpg" alt="Corporate 3">
+      </div>
+      <div class="caption">Corporate Event</div>
+    </div>
+    <div class="photo" onclick="openModal(0)">
+      <div class="marriage-gallery">
+        <img src="./Images/Creative Portraits/img1.jpg" alt="Creative Portrait 1">
+        <img src="./Images/Creative Portraits/img4.avif" alt="Creative Portrait 2">
+        <img src="./Images/Creative Portraits/img3.jpg" alt="Creative Portrait 3">
+      </div>
+      <div class="caption">Creative Portraits</div>
+    </div>
+    <div class="photo" onclick="openModal(0)">
+      <div class="birthday-gallery">
+        <img src="./Images/birthday/img1.avif" alt="Birthday 1">
+        <img src="./Images/birthday/img2.jpg" alt="Birthday 2">
+        <img src="./Images/birthday/img3.jpg" alt="Birthday 3">
+      </div>
+      <div class="caption">Birthday Celebration</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Our Services | FrameFocus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #4b0082, #8a2be2);
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 i {
+      margin-right: 10px;
+      color: #ffd700;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 8px 15px;
+      border-radius: 25px;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    nav a.active {
+      color: #ffd700;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .service-header {
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .service-card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-title {
+      font-size: 1.4em;
+      color: #4b0082;
+      margin-bottom: 10px;
+    }
+    .service-description {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #eee;
+      padding: 20px;
+      text-align: center;
+      color: #555;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #4b0082;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-camera"></i> FrameFocus</h1>
+    <nav>
+      <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./gallery.html"><i class="fas fa-images"></i> Gallery</a>
+      <a href="./service.html" class="active"><i class="fas fa-concierge-bell"></i> Services</a>
+      <a href="./achive.html"><i class="fas fa-trophy"></i> Achievements</a>
+      <a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+  <div class="service-header">
+    <h1>Our Photography Services</h1>
+  </div>
+
+  <div class="services-container">
+
+    <div class="service-card">
+      <div class="service-title">Wedding Photography</div>
+      <div class="service-description">
+        We specialize in capturing timeless wedding moments, from traditional rituals to candid emotions.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Birthday Shoots</div>
+      <div class="service-description">
+        Celebrate your special day with vibrant photoshoots for kids, teens, and adults alike!
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Outdoor Shoots</div>
+      <div class="service-description">
+        Nature and candid vibes? We got you. Scenic locations and perfect lighting are our thing.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Event Coverage</div>
+      <div class="service-description">
+        Full event coverage with HD quality and emotional highlights that preserve your memories forever.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Pre-Wedding Shoots</div>
+      <div class="service-description">
+        Let your love story shine with dreamy, romantic pre-wedding photos at stunning locations.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Photo Editing & Retouching</div>
+      <div class="service-description">
+        Add a magical touch to your photos with our professional editing and color grading services.
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    &copy; 2025 FrameFocus. All rights reserved.
+  </footer>
+
+</body>
+</html>
