@@ -32,7 +32,7 @@ Open index.html in your web browser (no server required for basic viewing).
 
 Email: pavanipalu140@gmail.com
 
-Phone: 8297164686
+Phone: 829716468
 
 Location: Aswaraopeta, Kothagudem, Telangana, 507301
 
@@ -41,3 +41,14 @@ Location: Aswaraopeta, Kothagudem, Telangana, 507301
 yaml Copy code
 
 OUTPUT:
+![Image](https://github.com/user-attachments/assets/68bd88be-bc60-47bd-8dbc-52caac5ba7a1)
+
+![Image](https://github.com/user-attachments/assets/b78f400a-97a6-4b75-9eeb-76fe5cb6ccd7)
+
+![Image](https://github.com/user-attachments/assets/e9971892-d5b8-4ccb-b20c-7e64b6c7c1cc)
+
+![Image](https://github.com/user-attachments/assets/a83439cd-3324-4dcb-a494-552de78c82f0)
+
+![Image](https://github.com/user-attachments/assets/5d1f77cd-188c-4245-add4-52b4a42da778)
+
+![Image](https://github.com/user-attachments/assets/a24930a5-6830-487b-8276-518bdd056a9c)
